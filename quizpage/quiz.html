@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Topic Quiz</title>
+  <link rel="stylesheet" href="quiz.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Boost your skill </h1>
+      <p class="muted">Enter a topic, and I’ll generate 10 questions. You’ll answer them one by one.</p>
+
+      <form id="topicForm" class="row">
+        <input id="topicInput" type="text" placeholder="e.g., Cloud Computing" required />
+        <button id="startBtn" type="submit">Generate Questions</button>
+        
+      </form>
+
+      <div id="status" class="status" aria-live="polite"></div>
+
+      <div id="quizBox" class="quiz hidden">
+        <div class="progress-wrap">
+          <div id="progressBar" class="progress"></div>
+          <div id="progressText" class="progress-text">0 / 10</div>
+        </div>
+
+        <div class="q-head">
+          <span id="qBadge" class="badge">Q1</span>
+          <h2 id="questionText">Question appears here…</h2>
+        </div>
+
+        <textarea id="answerInput" rows="5" placeholder="Type your answer here..."></textarea>
+
+        <div class="row">
+          <button id="submitAnswerBtn" type="button">Submit & Next</button>
+          <button id="skipBtn" type="button" class="ghost">Skip</button>
+        </div>
+      </div>
+
+      <div id="summaryBox" class="summary hidden">
+        <h2>All done! 🎉</h2>
+        <p>You answered all questions. Review below.</p>
+        <ol id="answersList"></ol>
+       
+         <div class="row">
+         
+    <button id="restartBtn" type="button" class="ghost">Start Over</button>
+    <button id="closeBtn" type="button" class="ghost">Close</button>
+  </div>
+        
+    </section>
+    
+  </main>
+  <footer>
+    <p id="foter">Created and maintained by Saif •</p> 
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
